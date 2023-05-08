@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function login(data) {
   return request({
-    url: '/vue-admin-template/user/login',
+    url: '/admin/system/login',
     method: 'post',
     data
   })
@@ -10,7 +10,7 @@ export function login(data) {
 
 export function getInfo(token) {
   return request({
-    url: '/vue-admin-template/user/info',
+    url: '/admin/system/info',
     method: 'get',
     params: { token }
   })
@@ -18,7 +18,15 @@ export function getInfo(token) {
 
 export function logout() {
   return request({
-    url: '/vue-admin-template/user/logout',
+    url: '/admin/system/logout',
     method: 'post'
+  })
+}
+// 用户管理
+export function sysRole(page, data) {
+  return request({
+    url: '/admin/system/login',
+    method: 'post',
+    data
   })
 }
